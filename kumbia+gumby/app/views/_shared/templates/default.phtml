@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta http-equiv='Content-type' content='text/html; charset=<?php echo APP_CHARSET ?>' />
+  <title>KumbiaPHP web &amp; App Framework</title>
+  <?php Tag::css('bienvenida') ?>
+  <?php Tag::css('gumby/import12') ?>
+  <?php Tag::css('style') ?>
+  <?php echo Html::includeCss() ?>
+</head>
+<body>
+    <div id='content' class="row">
+        <div id='head'>
+			<?php View::partial("menu"); ?>
+        </div>
+		
+		<div id='content' class="row">
+		
+		<div class="container">
+		  <div class="row">
+		   <div class="six columns">
+			 <?php echo Html::img('default/kumbia.png','KumbiaPHP logo') ?>
+			</div>
+			<div class="six columns">
+			  <h1><small>web &amp; app Framework versión <?php echo kumbia_version() ?></small></h1>
+			</div>
+		  </div>
+		</div>
+		
+			
+			<?php View::content(); ?>
+		</div>
+		 <?php echo Tag::js("jquery/jquery.min"); ?>
+    <?php echo Tag::js("gumby/libs/gumby.min"); ?>
+    <?php echo Tag::js("gumby/plugins"); ?>
+    <?php echo Tag::js("gumby/main"); ?>
+	
+    <?php View::partial('kumbia/footer') ?>
+    </div>
+
+</body>
+</html>
